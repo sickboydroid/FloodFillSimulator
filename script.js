@@ -3,13 +3,16 @@ const pickedColor = document.querySelector(".picked-color");
 const redBar = document.querySelector("#red");
 const greenBar = document.querySelector("#green");
 const blueBar = document.querySelector("#blue");
+const clearGrid = document.querySelector("#clear");
+const DEFAULT_CELL_SIZE_PIXELS = 20;
 let paintGrid = [];
 
-onPickedColorChange();
-resetPaintArea(20);
 [redBar, greenBar, blueBar].forEach(e =>
   e.addEventListener("input", onPickedColorChange)
 );
+clearGrid.addEventListener("click", () => resetPaintArea(DEFAULT_CELL_SIZE_PIXELS));
+onPickedColorChange();
+resetPaintArea(DEFAULT_CELL_SIZE_PIXELS);
 
 function resetPaintArea(cellSizePixels) {
   const width = paintArea.getBoundingClientRect().width;
