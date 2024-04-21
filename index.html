@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Fill</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tools-container">
+        <div class="color-picker">
+          <div class="red-container">
+            <label for="red">Red</label>
+            <input type="range" min="0" max="255" id="red" value="1" />
+          </div>
+          <div class="green-container">
+            <label for="green">Green</label>
+            <input type="range" min="0" max="255" id="green" value="30" />
+          </div>
+          <div class="blue-container">
+            <label for="blue">Blue</label>
+            <input type="range" min="0" max="255" id="blue" value="254" />
+          </div>
+        </div>
+        <div class="picked-color" style="background-color: red"></div>
+        <button id="clear">Clear</button>
+        <ul>
+          <li>Hold <b>ctrl</b> to draw</li>
+          <li>Control <b>fill color</b> using above controls</li>
+        </ul>
+      </div>
+      <div class="paint-area"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
